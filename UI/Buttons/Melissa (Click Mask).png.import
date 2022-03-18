@@ -1,0 +1,15 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+path="res://.import/Melissa (Click Mask).png-e9dfad6480677f12bba1aced0aef8e1a.res"
+
+[deps]
+
+source_file="res://UI/Buttons/Melissa (Click Mask).png"
+dest_files=[ "res://.import/Melissa (Click Mask).png-e9dfad6480677f12bba1aced0aef8e1a.res" ]
+
+[params]
+
+create_from=1
+threshold=0.5

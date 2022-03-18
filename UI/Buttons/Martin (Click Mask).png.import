@@ -1,0 +1,15 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+path="res://.import/Martin (Click Mask).png-f7c6a604c2bdfc634a8b8232b666655d.res"
+
+[deps]
+
+source_file="res://UI/Buttons/Martin (Click Mask).png"
+dest_files=[ "res://.import/Martin (Click Mask).png-f7c6a604c2bdfc634a8b8232b666655d.res" ]
+
+[params]
+
+create_from=1
+threshold=0.5

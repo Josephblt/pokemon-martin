@@ -1,0 +1,372 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Scripts/Main Menu UI.gd" type="Script" id=1]
+[ext_resource path="res://UI/Windows/Window.png" type="Texture" id=2]
+[ext_resource path="res://UI/Backgrounds/Battle.png" type="Texture" id=3]
+[ext_resource path="res://UI/Buttons/Time (Normal).png" type="Texture" id=4]
+[ext_resource path="res://UI/Buttons/Time (Pressed).png" type="Texture" id=5]
+[ext_resource path="res://UI/Fonts/Pokemon Solid.tres" type="DynamicFont" id=6]
+[ext_resource path="res://UI/Buttons/Difficulty (Normal).png" type="Texture" id=7]
+[ext_resource path="res://UI/Buttons/Difficulty (Pressed).png" type="Texture" id=8]
+[ext_resource path="res://UI/Buttons/Mode (Normal).png" type="Texture" id=9]
+[ext_resource path="res://UI/Buttons/Mode (Pressed).png" type="Texture" id=10]
+[ext_resource path="res://UI/Buttons/Calibration Button (Normal).png" type="Texture" id=11]
+[ext_resource path="res://UI/Buttons/Calibration Button (Pressed).png" type="Texture" id=12]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Activate"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Battle:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"update": 3,
+"values": [ Vector2( 262, 100 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Battle/Container/Time/Button:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Battle/Container/Difficulty/Button:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Deactivate"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Battle:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 262, 100 ), Vector2( 262, -500 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Battle/Container/Time/Button:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Battle/Container/Difficulty/Button:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="StreamTexture" id=3]
+flags = 4
+load_path = "res://.import/Calibration Button (Normal).png-fa145c2d5c9e64f8356f7ae8c91b6667.stex"
+
+[sub_resource type="StreamTexture" id=4]
+flags = 4
+load_path = "res://.import/Calibration Button (Pressed).png-572c0ebbec78bbf0dfe1e669754bd5ce.stex"
+
+[sub_resource type="Animation" id=5]
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control Mode Button:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.013014, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 824, 0 ), Vector2( 824, 0 ), Vector2( 412, 200 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Down Calibration Button:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Left Calibration Button:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Right Calibration Button:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Up Calibration Button:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Node" type="Node"]
+
+[node name="Main Menu UI" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="Battle" type="NinePatchRect" parent="Main Menu UI"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -250.0
+margin_top = -800.0
+margin_right = 250.0
+margin_bottom = -400.0
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 233, 400 )
+patch_margin_left = 40
+patch_margin_top = 50
+patch_margin_right = 40
+patch_margin_bottom = 70
+
+[node name="Background" type="TextureRect" parent="Main Menu UI/Battle"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -88.5
+margin_top = -100.0
+margin_right = 88.5
+margin_bottom = 100.0
+rect_pivot_offset = Vector2( 88, 100 )
+texture = ExtResource( 3 )
+
+[node name="Container" type="Control" parent="Main Menu UI/Battle"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 50.0
+margin_top = 60.0
+margin_right = -50.0
+margin_bottom = -80.0
+
+[node name="Time" type="Control" parent="Main Menu UI/Battle/Container"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 380.0
+margin_bottom = 120.0
+
+[node name="Button" type="TextureButton" parent="Main Menu UI/Battle/Container/Time"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -50.0
+margin_right = 100.0
+margin_bottom = 50.0
+rect_pivot_offset = Vector2( 50, 50 )
+focus_mode = 0
+mouse_filter = 1
+disabled = true
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="Main Menu UI/Battle/Container/Time"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 120.0
+custom_colors/font_color = Color( 1, 0.796078, 0.0196078, 1 )
+custom_colors/font_outline_modulate = Color( 0.2, 0.211765, 0.227451, 1 )
+custom_fonts/font = ExtResource( 6 )
+text = "TEST"
+align = 1
+valign = 1
+
+[node name="Difficulty" type="Control" parent="Main Menu UI/Battle/Container"]
+margin_left = 20.0
+margin_top = 140.0
+margin_right = 380.0
+margin_bottom = 240.0
+
+[node name="Button" type="TextureButton" parent="Main Menu UI/Battle/Container/Difficulty"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -50.0
+margin_right = 100.0
+margin_bottom = 50.0
+rect_pivot_offset = Vector2( 50, 50 )
+mouse_filter = 1
+disabled = true
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
+
+[node name="Label" type="Label" parent="Main Menu UI/Battle/Container/Difficulty"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 120.0
+custom_colors/font_color = Color( 1, 0.796078, 0.0196078, 1 )
+custom_colors/font_outline_modulate = Color( 0.2, 0.211765, 0.227451, 1 )
+custom_fonts/font = ExtResource( 6 )
+text = "TEST"
+align = 1
+valign = 1
+
+[node name="Animation Player" type="AnimationPlayer" parent="Main Menu UI"]
+anims/Activate = SubResource( 1 )
+anims/Deactivate = SubResource( 2 )
+
+[node name="Settings UI" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 50.0
+margin_top = 50.0
+margin_right = -50.0
+margin_bottom = -50.0
+mouse_filter = 2
+
+[node name="Control Mode Button" type="TextureButton" parent="Settings UI"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -512.0
+margin_top = 200.0
+margin_right = -412.0
+margin_bottom = 300.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+expand = true
+stretch_mode = 5
+
+[node name="Down Calibration Button" type="TextureButton" parent="Settings UI"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -50.0
+margin_top = 80.0
+margin_right = 50.0
+margin_bottom = 180.0
+rect_rotation = 180.0
+rect_pivot_offset = Vector2( 50, 50 )
+shortcut_in_tooltip = false
+action_mode = 0
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 12 )
+expand = true
+stretch_mode = 5
+
+[node name="Left Calibration Button" type="TextureButton" parent="Settings UI"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -180.0
+margin_top = -50.0
+margin_right = -80.0
+margin_bottom = 50.0
+rect_rotation = 270.0
+rect_pivot_offset = Vector2( 50, 50 )
+shortcut_in_tooltip = false
+action_mode = 0
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 12 )
+expand = true
+stretch_mode = 5
+
+[node name="Right Calibration Button" type="TextureButton" parent="Settings UI"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 80.0
+margin_top = -50.0
+margin_right = 180.0
+margin_bottom = 50.0
+rect_rotation = 90.0
+rect_pivot_offset = Vector2( 50, 50 )
+shortcut_in_tooltip = false
+action_mode = 0
+texture_normal = SubResource( 3 )
+texture_pressed = SubResource( 4 )
+expand = true
+stretch_mode = 5
+
+[node name="Up Calibration Button" type="TextureButton" parent="Settings UI"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -50.0
+margin_top = -180.0
+margin_right = 50.0
+margin_bottom = -80.0
+rect_pivot_offset = Vector2( 50, 50 )
+shortcut_in_tooltip = false
+action_mode = 0
+texture_normal = SubResource( 3 )
+texture_pressed = SubResource( 4 )
+expand = true
+stretch_mode = 5
+
+[node name="Animation Player" type="AnimationPlayer" parent="Settings UI"]
+"anims/Game - Calibration Animation" = SubResource( 5 )
+
+[connection signal="pressed" from="Main Menu UI/Battle/Container/Time/Button" to="Main Menu UI" method="_on_time_pressed"]
+[connection signal="pressed" from="Main Menu UI/Battle/Container/Difficulty/Button" to="Main Menu UI" method="_on_difficulty_pressed"]

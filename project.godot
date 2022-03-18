@@ -1,0 +1,36 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[  ]
+_global_script_class_icons={
+}
+
+[application]
+
+config/name="Pokemon Martin Melissa"
+run/main_scene="res://Scenes/Main Scene.tscn"
+boot_splash/image="res://UI/Backgrounds/Splash.png"
+boot_splash/bg_color=Color( 0.313726, 0.313726, 0.313726, 1 )
+config/icon="res://UI/Icons/Launcher/Icon 300.png"
+
+[display]
+
+window/handheld/orientation="sensor_landscape"
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
+
+[logging]
+
+file_logging/log_path="/home/wlemos/Documents/log.txt"
+
+[rendering]
+
+environment/default_clear_color=Color( 0.301961, 0.301961, 0.301961, 1 )
+quality/dynamic_fonts/use_oversampling=false
